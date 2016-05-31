@@ -16,7 +16,7 @@ function emit(socket, type, data){
     message.data=data;
 
     if(this.config.rawBuffer){
-        console.log(this.config.encoding)
+        this.log(this.config.encoding)
         message=new Buffer(type,this.config.encoding);
     }else{
         message=eventParser.format(message);
